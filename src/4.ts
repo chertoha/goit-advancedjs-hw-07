@@ -25,13 +25,13 @@ abstract class House {
     this.door = false;
   }
 
-  comeIn(person: Person) {
+  comeIn(person: Person): void {
     if (this.door) {
       this.tenants.push(person);
     }
   }
 
-  abstract openDoor(key: Key);
+  abstract openDoor(key: Key): void;
 }
 
 class MyHouse extends House {
